@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="graphContainer">
+    <div id="cy"></div>
+
+    <div>
+      <table id="distanceTable"></table>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 5px; margin: 5px 0;">
+    <div>
+      <label for="algorithm">Choose an algorithm and select nodes</label>
+      <br />
+      <select name="algorithm" id="algorithm">
+        <option value="dijkstra">Dijkstra</option>
+        <option value="bellman ford">Distance Vector</option>
+      </select>
+      <select id="start" class="nodeSelect"></select>
+      <select id="end" class="nodeSelect"></select>
+      <button id="algoBtn">Run/Reset</button>
+      <button id="runToComplete">Animate Until Complete</button>
+      <button id="stepForward">Step Forward</button>
+      <button id="stepBackward">Step Back</button>
+    </div>
+    <div>
+      <input type="text" placeholder="Enter node name" id="addNode" />
+      <button id="addNodeBtn">Add Node</button>
+    </div>
+    <div>
+      <select id="removeSelect" class="nodeSelect"></select>
+      <button id="removeNodeBtn">Remove Node</button>
+    </div>
+    <div>
+      <select id="edge1" class="nodeSelect"></select>
+      <select id="edge2" class="nodeSelect"></select>
+      <input type="number" placeholder="add weight" id="weight" />
+      <button id="addEdgeBtn">Add Edge</button>
+    </div>
+    <div>
+      <select id="updateEdgeSelect" class="edgeSelect"></select>
+      <input type="number" placeholder="New weight" id="updateEdgeWeight" />
+      <button id="updateEdgeBtn">Update Edge</button>
+    </div>
+    <div>
+      <select id="removeEdgeSelect" class="edgeSelect"></select>
+      <button id="removeEdgeBtn">Remove Edge</button>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
